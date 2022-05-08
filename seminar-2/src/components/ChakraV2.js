@@ -12,6 +12,9 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
+  AlertTitle,
+  AlertDescription,
+  CloseButton,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import Container from "./Container";
@@ -54,7 +57,15 @@ const ChakraV2 = ({ data }) => {
       {alertOpen && (
         <Alert status="success">
           <AlertIcon />
-          {data.alertText}
+          <AlertTitle>Alert!</AlertTitle>
+          <AlertDescription>{data.alertText}</AlertDescription>
+          <CloseButton
+            alignSelf="flex-start"
+            position="relative"
+            right={-1}
+            top={-1}
+            onClick={() => setAlertOpen(false)}
+          />
         </Alert>
       )}
     </>

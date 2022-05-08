@@ -57,12 +57,12 @@ const MaterialV1 = ({ data }) => {
 
         <Button onClick={handleOpen}>Open modal</Button>
         <Modal open={open} onClose={handleClose}>
-          <Box sx={style}>
+          <div>
             <Typography variant="h6" component="h3">
               Modal title
             </Typography>
-            <Typography sx={{ mt: 2 }}>{data.lorem}</Typography>
-          </Box>
+            <Typography>{data.lorem}</Typography>
+          </div>
         </Modal>
       </Container>
       {alertOpen && <Alert severity="success">{data.alertText}</Alert>}

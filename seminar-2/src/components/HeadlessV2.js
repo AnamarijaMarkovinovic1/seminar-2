@@ -65,11 +65,20 @@ const HeadlessV2 = ({ data }) => {
               alignItems: "center",
             }}
           >
-            <Dialog.Panel className="w-50 bg-white">
+            <Dialog.Panel
+              className="w-50 bg-white p-2"
+              style={{ borderRadius: "4px" }}
+            >
               <Dialog.Title>Modal title</Dialog.Title>
               <Dialog.Description>{data.lorem}</Dialog.Description>
 
-              <button onClick={() => setIsOpen(false)}>Close</button>
+              <button
+                className="p-2 text-white bg-primary mt-2"
+                style={{ borderRadius: "4px" }}
+                onClick={() => setIsOpen(false)}
+              >
+                Close
+              </button>
             </Dialog.Panel>
           </div>
         </Dialog>
